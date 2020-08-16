@@ -1,4 +1,4 @@
-// const mongoose = require('mongoose');
+const mongoose = require('mongoose');
 
 const healthCheck = (req, res) => {
   let healthcheck = {
@@ -6,8 +6,8 @@ const healthCheck = (req, res) => {
     message: "OK",
     timestamp: Date.now()
   };
-  // const dbState = mongoose.STATES[mongoose.connection.readyState];
-  // healthcheck = { ...healthcheck, dbState };
+  const dbState = mongoose.STATES[mongoose.connection.readyState];
+  healthcheck = { ...healthcheck, dbState };
   try {
     res.send(healthcheck);
   } catch (e) {

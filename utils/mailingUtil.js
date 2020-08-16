@@ -1,5 +1,5 @@
 var nodemailer = require("nodemailer");
-const util = require("./utils");
+const util = require("./util");
 
 const EMAIL_USER = process.env.EMAIL_USER;
 const EMAIL_PASS = process.env.EMAIL_PASS;
@@ -10,7 +10,22 @@ const defaultMailOptions = {
   to: "sharmahimahsu1494@gmail.com",
   subject: "Greetings from Hazaar Carobar app",
   html:
-    "<div style='text-align:center;'><h3>Greetings from Hazaar Carobar</h3><p>Welcome to Hazaar Carobar app. Your right car at the right price is just clicks away. We find the best deals for our users and believe in providing the best servide possible. Sort and select car matching your needs from a wide variety of cars.</p><p>Team Hazaar Carobar</p><p>For any suggestions, ideas, issues or feedback, please write to us at:  quoteaquote.india@gmail.com</p></div>"
+    `<div style='text-align:center;'>
+    <h3>
+    	Thank you for your message
+    </h3>
+    <p>
+    	I have received your message and if needed, will revert back shortly. 
+    </p>
+    <p>
+    	Thanks and regards
+    </p>
+    <p>
+      Himanshu 
+      <br/>
+      https://knowhimanshu.in
+    </p>
+  </div>`
 };
 
 async function mailingUtil({ sendTo, htmlMessage, subject, from }) {
