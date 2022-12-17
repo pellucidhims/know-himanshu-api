@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const healthCheck = (req, res) => {
   let healthcheck = {
     uptime: process.uptime(),
-    message: "OK",
+    message: "SERVER UP!",
     timestamp: Date.now()
   };
   const dbState = mongoose.STATES[mongoose.connection.readyState];
