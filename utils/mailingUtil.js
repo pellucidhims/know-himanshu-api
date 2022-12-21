@@ -23,7 +23,7 @@ const defaultMailOptions = {
     <p>
       Himanshu 
       <br/>
-      https://knowhimanshu.in
+      https://www.knowhimanshu.in
     </p>
   </div>`
 };

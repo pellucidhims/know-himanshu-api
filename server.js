@@ -8,6 +8,7 @@ const util = require("./utils/util");
 const config = require('./utils/config');
 const visitor = require("./routes/visitor.route");
 const admin = require("./routes/admin.route");
+const resource = require("./routes/resource.route");
 const customMiddleware = require("./middlewares/middleware");
 const healthCheck = require("./routes/healthCheck.route");
 // const UserImage = require("./models/userImage.model");
@@ -67,6 +68,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(customMiddleware.logRequest);
 app.use("/visitor", visitor);
 app.use("/admin",admin);
+app.use("/resource", resource);
 app.use("/healthCheck", healthCheck);
 
 // This path is used post account activation and static account activation HTML file is served.

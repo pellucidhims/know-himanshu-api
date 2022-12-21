@@ -1,4 +1,7 @@
 require("dotenv").config();
+const NodeCache = require( "node-cache" );
+
+const nodeCache = new NodeCache({stdTTL: 3600});
 // const Twilio = require('twilio');
 // const bcrypt = require('bcrypt');
 
@@ -48,5 +51,6 @@ module.exports = {
   // getHash,
   // checkHash,
   // sendOTP,
-  isNullUndefinedOrEmpty
+  isNullUndefinedOrEmpty,
+  nodeCache,
 };
