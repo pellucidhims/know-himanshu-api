@@ -1,0 +1,10 @@
+{
+    "version": 2,
+    "name": "know-himanshu-api",
+    "builds": [
+       { "src": "app.js", "use": "@vercel/node" }
+    ],
+    "routes": [
+       { "src": "/(.*)", "dest": "/app.js" }
+    ]
+ }
